@@ -113,3 +113,4 @@ dmypy.json
 # data folder
 
 /data_wrangling/yelp_data
+/data_wrangling/.ipynb_checkpoints
