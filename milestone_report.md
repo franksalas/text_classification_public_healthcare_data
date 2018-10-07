@@ -103,8 +103,8 @@ Sentiment analysis was performed on the text review. The sentiment value ranges 
 
 Reviews were selected whose star value were 1, and 5 and sentiment values were given based on the original review text and clean version.
 
-|  value |reviews|sent_score|sent_score_clean|   
-|------------|-----|---|---|---|
-|positive (5)|31726|40940|39717 |   
-|negative (1)|21988|12205|13239 |   
-|neutral     |0    |569  |758   | 
+|  value     | reviews |sent_score|sent_score_clean|   
+|------------|---------|----------|----------------|
+|positive (5)|31726    |40940     |39717           |   
+|negative (1)|21988    |12205     |13239           |   
+|neutral     |0        |569       |758             | 
