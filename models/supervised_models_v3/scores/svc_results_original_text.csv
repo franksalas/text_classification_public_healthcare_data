@@ -1,0 +1,8 @@
+,model,C_value,CountVectorizer,TfidfVectorizer,ngram_range,max_df,text,score
+0,LinearSVC,1.0,1,0,"(1, 1)",1.0,original,0.9657565158524202
+1,LinearSVC,0.7,1,0,"(1, 1)",1.0,original,0.9666591447591109
+2,LinearSVC,1.0,0,1,"(1, 1)",1.0,original,0.9745007333859866
+3,LinearSVC,0.3,0,1,"(1, 1)",1.0,original,0.9757982624393546
+4,LinearSVC,1.0,0,1,"(1, 2)",1.0,original,0.9811576215728308
+5,LinearSVC,1.0,0,1,"(1, 2)",0.1,original,0.9833577795328895
+6,LinearSVC,1.0,0,1,"(1, 2)",0.1,original,0.9833577795328895

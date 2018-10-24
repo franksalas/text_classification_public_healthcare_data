@@ -1,0 +1,5 @@
+,model,alpha,CountVectorizer,TfidfVectorizer,text,score
+0,MultinomialNB,1.0,1,0,clean,0.9567302267855128
+1,MultinomialNB,0.3,1,0,clean,0.9566738124788446
+2,MultinomialNB,1.0,0,1,clean,0.9554326977321449
+3,MultinomialNB,0.6,0,1,clean,0.9561096694121629
