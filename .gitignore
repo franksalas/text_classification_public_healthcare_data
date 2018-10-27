@@ -116,3 +116,4 @@ dmypy.json
 /data_wrangling/.ipynb_checkpoints
 /data_exploration/.ipynb_checkpoints
 /data_exploration/yelp_data
+/data/yelp_datasets
