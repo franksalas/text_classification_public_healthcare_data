@@ -14,6 +14,19 @@ import spacy
 import nltk
 from nltk.tokenize.toktok import ToktokTokenizer
 
+MEDICAL_MAP = {
+'GYN ':'Gynecologist',
+'RN': 'Registered Nurse',
+'PA':'Physician Assistant',
+'PA-C':'Physician Assistant',
+'NP':'Nurse Practioner',
+ 'NP-C':'Nurse Practioner',
+'PT'   : 'Physical Therapist',
+'MD': 'Physician',
+'PHN' :  'Public Health Nurse',
+'RNC' : 'Certified Registered Nurse',
+}
+
 
 # !python -m spacy download en_core_web_sm
 
@@ -49,6 +62,36 @@ def expand_contractions(text, contraction_mapping=CONTRACTION_MAP):
     expanded_text = contractions_pattern.sub(expand_match, text)
     expanded_text = re.sub("'", "", expanded_text)
     return expanded_text
+
+
+
+
+ # Expand contractions
+def expand_medical_names(text, contraction_mapping=MEDICAL_MAP):
+    
+    contractions_pattern = re.compile('({})'.format('|'.join(contraction_mapping.keys())), 
+                                      flags=re.IGNORECASE|re.DOTALL)
+    def expand_match(contraction):
+        match = contraction.group(0)
+        first_char = match[0]
+        expanded_contraction = contraction_mapping.get(match)\
+                                if contraction_mapping.get(match)\
+                                else contraction_mapping.get(match.lower())                       
+        expanded_contraction = first_char+expanded_contraction[1:]
+        return expanded_contraction
+        
+    expanded_text = contractions_pattern.sub(expand_match, text)
+    expanded_text = re.sub("'", "", expanded_text)
+    return expanded_text
+
+
+
+
+
+
+
+
+
 
 #Remove special chars
 def remove_special_characters(text, remove_digits=False):
@@ -86,10 +129,15 @@ def remove_stopwords(text, is_lower_case=False):
 # -------------------
 
 
-def normalize_corpus(corpus, html_stripping=False, contraction_expansion=True,
-                     accented_char_removal=True, text_lower_case=True, 
-                     text_lemmatization=True, special_char_removal=True, 
-                     stopword_removal=True, remove_digits=True):
+def normalize_corpus(corpus, html_stripping=False, 
+                     contraction_expansion=True,
+                     expand_medical_names=True,
+                     accented_char_removal=True, 
+                     text_lower_case=True, 
+                     text_lemmatization=True, 
+                     special_char_removal=True, 
+                     stopword_removal=True, 
+                     remove_digits=True):
     
     normalized_corpus = []
     # normalize each document in the corpus
@@ -100,6 +148,9 @@ def normalize_corpus(corpus, html_stripping=False, contraction_expansion=True,
         # remove accented characters
         if accented_char_removal:
             doc = remove_accented_chars(doc)
+        # expand medical names  
+        if expand_medical_names:
+            doc = expand_medical_names(doc)
         # expand contractions    
         if contraction_expansion:
             doc = expand_contractions(doc)
