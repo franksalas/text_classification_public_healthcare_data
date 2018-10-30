@@ -111,9 +111,11 @@ venv.bak/
 dmypy.json
 
 # data folder
-
 /data_wrangling/yelp_data
 /data_wrangling/.ipynb_checkpoints
-/data_exploration/.ipynb_checkpoints
-/data_exploration/yelp_data
-/data/yelp_datasets
+/data/yelp_datasets/yelp_academic_dataset_business.json
+/data/yelp_datasets/yelp_academic_dataset_review.json
+/models/supervised_models_v2/yelp_data
+/models/supervised_models_v3/yelp_data
+/models/unsupervised/yelp_data
+/models/unsupervised/intermediate_yelp

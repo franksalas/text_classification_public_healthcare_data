@@ -1,11 +1,5 @@
 
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 01 01:11:02 2016
-
-@author: DIP
-"""
-
 
 '''
 ORIGINAL SOURCE:
@@ -13,7 +7,34 @@ Practical Machine Learning with Python: A Problem-Solver's Guide to Building Rea
 Originally published: December 20, 2017
 Authors: Tushar Sharma, Dipanjan Sarkar, Raghav Bali  
 '''
-
+MEDICAL_MAP = {
+'GYN':'Gynecologist',
+'RN': 'Registered Nurse',
+'PA-C':'Physician Assistant',
+'PA':'Physician Assistant',
+'NP-C':'Nurse Practioner',
+'NP':'Nurse Practioner',
+'PT':'Physical Therapist',
+'MD': 'Physician',
+'Dr.': 'Doctor',
+'Dr,': 'Doctor',
+'Dr': 'Doctor',
+'PHN' :  'Public Health Nurse',
+'RNC' : 'Certified Registered Nurse',
+'gyn':'Gynecologist',
+'rn': 'Registered Nurse',
+'pa-c':'Physician Assistant',
+'pa':'Physician Assistant',
+'np-c':'Nurse Practioner',
+'np':'Nurse Practioner',
+'pt' : 'Physical Therapist',
+'md': 'Physician',
+'dr.': 'Doctor',
+'dr,': 'Doctor',
+'dr': 'Doctor',
+'phn' :  'Public Health Nurse',
+'rnc' : 'Certified Registered Nurse'
+}
 CONTRACTION_MAP = {
 "ain't": "is not",
 "aren't": "are not",
