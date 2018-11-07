@@ -1,8 +1,0 @@
-,model,C_value,CountVectorizer,TfidfVectorizer,ngram_range,max_df,text,score
-0,LogisticRegression,1.0,1,0,"(1, 1)",1.0,clean,0.9672232878257926
-1,LogisticRegression,0.2,1,0,"(1, 1)",1.0,clean,0.967674602279138
-2,LogisticRegression,1.0,0,1,"(1, 1)",1.0,clean,0.9671104592124563
-3,LogisticRegression,8.0,0,1,"(1, 1)",1.0,clean,0.9700440031592011
-4,LogisticRegression,1.0,0,1,"(1, 2)",1.0,clean,0.9661514159990974
-5,LogisticRegression,1.0,0,1,"(1, 2)",0.1,clean,0.9672232878257926
-6,LogisticRegression,10.0,0,1,"(1, 2)",0.1,clean,0.9748392192259957
