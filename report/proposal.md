@@ -1,7 +1,7 @@
 
 # Proposal for Capstone Project
 
-**Title**: Using Natural Language Processing on Healthcare business reviews from Yelp. 
+**Title**:Text Classification on Public Unstructured Healthcare Data
 
 
 ## Problem
@@ -16,8 +16,6 @@ Yelp is a local-search service powered by crowd-sourced reviews about local busi
  I propose the use of Natural Language processing using the data from Yelp to analyze and understand healthcare-related businesses.
 
 
-
-
 ## Client  
 Healthcare providers that want to explore with external data.
 
@@ -29,8 +27,7 @@ I will extract healthcare related businesses star value and text reviews from th
 
 ## Approach
 
-I will first perform supervised learning with several classification algorithms (Naive Bayes, logistic regression, and SVC) and evaluating its score.
-Then I will perform topic modeling ( unsupervised learning)  by using latent Dirichlet allocation (LDA) to understand the general topic of each healthcare business review.
+I will first perform supervised learning with two classification algorithms Naive Bayes, vs SVC and evaluating its score.
 
 
 ## Limitations
